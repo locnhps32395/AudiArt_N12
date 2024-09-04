@@ -1,0 +1,48 @@
+.banner {
+    background-color: #333333; /* SoundCloud orange */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    background-image: url('../img/banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin-top: 20px;
+    overflow: hidden; /* Ensure image stays within border-radius */
+}
+
+.banner h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.banner p {
+    margin-bottom: 10px;
+}
+
+.banner img {
+    width: 100%; /* This style is no longer needed */
+}
+
+        .plans {
+            margin-top: 50px;
+        }
+        .plans h1 {
+            margin-bottom: 30px;
+        }
+        .plan-card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .plan-card h3, .plan-card h4 {
+            margin-bottom: 15px;
+        }
+        .plan-card p {
+            margin-bottom: 10px;
+        }
+        .table-first tbody tr, .table-second tbody tr, .table-third tbody tr {
+        height: 50px; /* Adjust this value as needed */
+    }

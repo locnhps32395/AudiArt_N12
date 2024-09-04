@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+    <title>Music Website</title>
+    <link rel="stylesheet" href="">
+
+    <!-- Bootstrap CSS v5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css">
+     <!-- Nút play -->
+     <style>
+        .card-body {
+            position: relative;
+        }
+
+        .play-button {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(240, 68, 29);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px; /* Tăng kích thước nút */
+            height: 60px; /* Tăng kích thước nút */
+            text-align: center;
+            line-height: 43px; /* Tăng kích thước nút */
+            font-size: 36px; /* Tăng kích thước biểu tượng */
+        }
+
+        .bg-beige:hover .play-button {
+            display: block;
+        }
+    </style>
+ 
+    <style>
+        body {
+            padding-top: 70px;
+        }
+
+        .bg-banner {
+            background-image: url('../img/Poster/ab.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 455px;
+        }
+
+        .footer {
+            background-color: aquamarine;
+            height: 200px;
+            text-align: center;
+            padding-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Fixed Header -->
+    <div class="fixed-top bg-dark text-white text-center py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo" ><img src="../img/logochinh.png" alt="" style="width: 130px; height: 40px; border-radius: 20px;"></div>
+            <div>
+                <button   type="button" class="btn " data-bs-toggle="modal" data-bs-target="#loginModal" style="border: 1px solid rgb(228, 111, 42); color: white;">
+                   <a href="../html/Dangnhap.html" style="text-decoration: none; color: white;"> Đăng nhập </a>
+                </button>
+                <a href="#" class="btn btn-danger me-3"  data-bs-toggle="modal" data-bs-target="#loginModal">Tạo tài khoản</a>
+                <a href="#" class="text-white me-3">Dành cho nghệ sĩ</a>
+            </div>
+        </div>
+    </div>
+
+   
+ 
+
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <!-- Banner Section -->
+        <div class="container bg-info text-white bg-banner">
+            <div class="d-flex justify-content-center align-items-center flex-column h-100">
+                <h1 class="text-center">Kết nối trên Audiart</h1>
+                <h5 class="text-center mb-4">Khám phá, phát trực tuyến và chia sẻ danh sách kết hợp âm nhạc không ngừng mở rộng từ các nghệ sĩ lớn và mới nổi trên khắp thế giới.</h5>
+                <a href="#" class="btn btn-danger"data-bs-toggle="modal" data-bs-target="#loginModal">Đăng ký miễn phí</a>
+            </div>
+        </div>
+
+        <!-- Search Section -->
+        <div class="container mt-5">
+            <div class="d-flex justify-content-center align-items-center mb-4">
+                <input class="form-control me-2" type="search" placeholder="Tìm kiếm nghệ sĩ, ban nhạc, bản nhạc" aria-label="Search" style="width: 600px;">
+                <span>hoặc</span>
+                <button class="btn btn-danger ms-2">Tải lên riêng của bạn</button>
+            </div>
+            <div class="text-center mb-4">
+                <h4>Nghe những gì đang thịnh hành miễn phí trong cộng đồng </h4>
+            </div>
+            
+            <!-- Cards Section -->
+            <div class="row row-cols-1 row-cols-md-6 g-4">
+                <div class="col">
+                    <div class="card h-100 bg-light">
+                        <div class="card-body">
+                            <div class="bg-beige mb-2 position-relative" style="height: 177px;">
+                                <img src="../img/Poster/album1.jpg" alt="" style="width: 160px; height: 170px;">
+                                <!-- Nút Play -->
+                                <button class="play-button">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <h5 class="card-title">Burgundy</h5>
+                            <p class="card-text text-muted">$UICIDEBOY$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-light">
+                        <div class="card-body">
+                            <div class="bg-beige mb-2 position-relative" style="height: 177px;">
+                                <img src="../img/Poster/album2.jpg" alt="" style="width: 160px; height: 170px;">
+                                <!-- Nút Play -->
+                                <button class="play-button">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <h5 class="card-title">Burgundy</h5>
+                            <p class="card-text text-muted">$UICIDEBOY$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-light">
+                        <div class="card-body">
+                            <div class="bg-beige mb-2 position-relative" style="height: 177px;">
+                                <img src="../img/Poster/album3.jpg" alt="" style="width: 160px; height: 170px;">
+                                <!-- Nút Play -->
+                                <button class="play-button">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <h5 class="card-title">Burgundy</h5>
+                            <p class="card-text text-muted">$UICIDEBOY$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-light">
+                        <div class="card-body">
+                            <div class="bg-beige mb-2 position-relative" style="height: 177px;">
+                                <img src="../img/Poster/album4.jpg" alt="" style="width: 160px; height: 170px;">
+                                <!-- Nút Play -->
+                                <button class="play-button">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <h5 class="card-title">Burgundy</h5>
+                            <p class="card-text text-muted">$UICIDEBOY$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-light">
+                        <div class="card-body">
+                            <div class="bg-beige mb-2 position-relative" style="height: 177px;">
+                                <img src="../img/Poster/album5.jpg" alt="" style="width: 160px; height: 170px;">
+                                <!-- Nút Play -->
+                                <button class="play-button">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <h5 class="card-title">Burgundy</h5>
+                            <p class="card-text text-muted">$UICIDEBOY$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-light">
+                        <div class="card-body">
+                            <div class="bg-beige mb-2 position-relative" style="height: 177px;">
+                                <img src="../img/Poster/album6.jpg" alt="" style="width: 160px; height: 170px;">
+                                <!-- Nút Play -->
+                                <button class="play-button">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <h5 class="card-title">Burgundy</h5>
+                            <p class="card-text text-muted">$UICIDEBOY$</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+
+
+             <!-- Search Section -->
+        <div class="container mt-5">
+            <!-- Cards Section -->
+            <div class="row row-cols-1 row-cols-md-6 g-4">
+                <div class="col">
+                    <div class="card h-100 bg-light">
+                        <div class="card-body">
+                            <div class="bg-beige mb-2 position-relative" style="height: 177px;">
+                                <img src="../img/Poster/album7.jpg" alt="" style="width: 160px; height: 170px;">
+                                <!-- Nút Play -->
+                                <button class="play-button">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <h5 class="card-title">Burgundy</h5>
+                            <p class="card-text text-muted">$UICIDEBOY$</p>
+                        </div>
+                    </div>
+                </div> <div class="col">
+                    <div class="card h-100 bg-light">
+                        <div class="card-body">
+                            <div class="bg-beige mb-2 position-relative" style="height: 177px;">
+                                <img src="../img/Poster/album8.jpg" alt="" style="width: 160px; height: 170px;">
+                                <!-- Nút Play -->
+                                <button class="play-button">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <h5 class="card-title">Burgundy</h5>
+                            <p class="card-text text-muted">$UICIDEBOY$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-light">
+                        <div class="card-body">
+                            <div class="bg-beige mb-2 position-relative" style="height: 177px;">
+                                <img src="../img/Poster/album9.jpg" alt="" style="width: 160px; height: 170px;">
+                                <!-- Nút Play -->
+                                <button class="play-button">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <h5 class="card-title">Burgundy</h5>
+                            <p class="card-text text-muted">$UICIDEBOY$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-light">
+                        <div class="card-body">
+                            <div class="bg-beige mb-2 position-relative" style="height: 177px;">
+                                <img src="../img/Poster/album11.jpg" alt="" style="width: 160px; height: 170px;">
+                                <!-- Nút Play -->
+                                <button class="play-button">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <h5 class="card-title">Burgundy</h5>
+                            <p class="card-text text-muted">$UICIDEBOY$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-light">
+                        <div class="card-body">
+                            <div class="bg-beige mb-2 position-relative" style="height: 177px;">
+                                <img src="../img/Poster/album1.jpg" alt="" style="width: 160px; height: 170px;">
+                                <!-- Nút Play -->
+                                <button class="play-button">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <h5 class="card-title">Burgundy</h5>
+                            <p class="card-text text-muted">$UICIDEBOY$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-light">
+                        <div class="card-body">
+                            <div class="bg-beige mb-2 position-relative" style="height: 177px;">
+                                <img src="../img/Poster/album2.jpg" alt="" style="width: 160px; height: 170px;">
+                                <!-- Nút Play -->
+                                <button class="play-button">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <h5 class="card-title">Burgundy</h5>
+                            <p class="card-text text-muted">$UICIDEBOY$</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-danger">Khám phá danh sách phát hành</a>
+            </div>
+        </div>
+
+        <!-- Additional Section -->
+        <div class="container mt-5">
+            <img src="../img/bannere.jpg" alt="Banner" class="img-fluid">
+        </div>
+
+        <!-- Additional Information -->
+        <div class="container mt-5 text-center">
+            <h1>Cảm ơn vì đã lắng nghe.</h1>
+            <h5>Bây giờ hãy tham gia. Lưu bản nhạc, theo dõi nghệ sĩ và xây dựng danh sách phát. Tất cả đều miễn phí.</h5>
+            <a href="#" class="btn btn-danger me-3" data-bs-toggle="modal" data-bs-target="#loginModal" style="width: 190px; height: 40px;">Tạo tài khoản</a>
+            <p></p>
+            <p>Bạn có sẳn một tài khoản? <a href="#" class="btn me-3" data-bs-toggle="modal" data-bs-target="#loginModal" style="width: 120px; height: 40px; border: 1px solid black; ">Đăng nhập</a></p>
+            <div class="d-flex justify-content-center flex-wrap">
+                <a href="#" style="text-decoration: none;">Giới thiệu về chúng tôi-</a>
+                <a href="#" style="text-decoration: none;">Tài nguyên nghệ sĩ-</a>
+                <a href="#" style="text-decoration: none;">Blog-</a>
+                <a href="#" style="text-decoration: none;">Việc làm-</a>
+                <a href="#" style="text-decoration: none;">Nhà phát triển-</a>
+                <a href="#" style="text-decoration: none;">Trợ giúp-</a>
+                <a href="#" style="text-decoration: none;">Pháp lý-</a>
+                <a href="#" style="text-decoration: none;">Quyền riêng tư-</a>
+                <a href="#" style="text-decoration: none;">Chính sách cookie-</a>
+                <a href="#" style="text-decoration: none;">Trình quản lý cookie-</a>
+                <a href="#" style="text-decoration: none;">Dấu ấn-</a>
+                <a href="#" style="text-decoration: none;">Biểu đồ</a>
+            </div>
+        </div>
+    </div>
+
+            <!-- Footer -->
+            <div class="fixed-footer bg-secondary text-white text-center py-3">
+                <p>&copy; 2024 Music Website. All rights reserved.</p>
+            </div>
+        </div>
+
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"></script>
+    </body>
+</html>

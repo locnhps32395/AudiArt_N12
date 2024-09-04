@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Next Pro</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .badge-discount {
+            background-color: #b74725;
+            color: white;
+            font-size: 0.75em;
+        }
+        .form-check-label {
+            display: flex;
+            align-items: center;
+        }
+        .form-check-label i {
+            margin-right: 8px;
+        }
+        .payment-methods img {
+            width: 40px;
+            margin-right: 5px;
+        }
+        .card-header {
+            font-weight: bold;
+            background-color: #343a40;
+            color: white;
+        }
+        .card-body {
+            background-color: #fff;
+        }
+        .btn-primary {
+            background-color: #343a40;
+            border-color: #343a40;
+        }
+        .btn-primary:hover {
+            background-color: #23272b;
+            border-color: #23272b;
+        }
+        .footer-links a {
+            margin-right: 10px;
+            color: #343a40;
+        }
+        .footer-links a:hover {
+            text-decoration: none;
+            color: #23272b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Get Next Pro</h2>
+                <form>
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            1. Select billing cycle
+                        </div>
+                        <div class="card-body">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="billingCycle" id="yearlyBilling" value="yearly" checked>
+                                <label class="form-check-label" for="yearlyBilling">
+                                    <i class="fas fa-calendar-alt"></i> Yearly billing <span class="badge badge-discount">48% YEARLY DISCOUNT</span><br>
+                                    ₫1,140,000, that's ₫95,000/month
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="billingCycle" id="monthlyBilling" value="monthly">
+                                <label class="form-check-label" for="monthlyBilling">
+                                    <i class="fas fa-calendar-day"></i> Monthly billing<br>
+                                    ₫183,500/month
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            2. Add payment details
+                        </div>
+                        <div class="card-body">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="card" value="card" checked>
+                                <label class="form-check-label" for="card">
+                                    <i class="fas fa-credit-card"></i> Card
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="paypal" value="paypal">
+                                <label class="form-check-label" for="paypal">
+                                    <i class="fab fa-paypal"></i> PayPal
+                                </label>
+                            </div>
+                            <div class="mt-2 payment-methods">
+                                <img src="https://via.placeholder.com/40x25?text=Visa" alt="Visa">
+                                <img src="https://via.placeholder.com/40x25?text=Mastercard" alt="Mastercard">
+                                <img src="https://via.placeholder.com/40x25?text=Amex" alt="American Express">
+                                <img src="https://via.placeholder.com/40x25?text=Discover" alt="Discover">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <h4>Review your purchase</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <div>Next Pro</div>
+                            <div>₫1,140,000</div>
+                        </div>
+                        <div>Billing cycle: Yearly</div>
+                        <div class="mt-3">
+                            Subscription will automatically renew at ₫1,650,000 every year, starting Jul 12, 2025, unless you cancel before the day of your next renewal in your subscription settings. All prices in VND.
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-block mt-3">Buy subscription</button>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="#">Do you have a coupon code?</a>
+        </div>
+        <div class="text-center mt-3">
+            <a href="#">Signed in as 19_Nguyễn Hữu Lộc. Sign out</a>
+        </div>
+        <div class="text-center footer-links mt-3">
+            <a href="#">Legal</a> -
+            <a href="#">Privacy</a> -
+            <a href="#">Cookies</a> -
+            <a href="#">Cookie Manager</a> -
+            <a href="#">Imprint</a> -
+            <a href="#">Help Center</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

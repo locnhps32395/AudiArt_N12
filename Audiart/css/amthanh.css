@@ -1,0 +1,95 @@
+#seek-bar {
+    width: 100%;
+    /* Đảm bảo thanh seek bar mở rộng đầy đủ */
+    margin: 0 10px;
+    /* Khoảng cách giữa các phần tử */
+}
+
+.music-player-controls {
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+    color: #343a40;
+    border-top: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    /* Căn chỉnh các phần tử vào giữa và tạo khoảng trống ở hai đầu */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.control-section,
+.time-info,
+.volume-section,
+.favorite-section {
+    display: flex;
+    align-items: center;
+
+    flex-grow: 1;
+    /* Cho phép mở rộng tối đa trong không gian còn lại */
+}
+
+.control-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+.control-button i {
+    font-size: 1.2rem;
+}
+
+.mix-buttons i,
+.icon-clickable {
+    cursor: pointer;
+
+}
+
+.time-info {
+    display: flex;
+    align-items: center;
+}
+
+.time-text {
+    margin: 0 0.3rem;
+}
+
+.seek-bar {
+    width: 100%;
+    /* Đảm bảo thanh seek bar mở rộng đầy đủ */
+}
+
+.volume-section {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    /* Mở rộng theo chiều ngang */
+}
+
+.volume-slider {
+    width: 70px;
+    /* Độ dài của thanh trượt âm lượng */
+}
+
+.song-info {
+
+    align-items: center;
+    text-align: center;
+}
+
+.song-info img {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.favorite-section i {
+    font-size: 1.5rem;
+    /* Đảm bảo kích thước của biểu tượng trái tim */
+}
+
+#player-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}

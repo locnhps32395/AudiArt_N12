@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Playlist</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .playlist-header {
+            background: linear-gradient(to bottom right, #a07961, #46362c);
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            position: relative;
+        }
+        .playlist-header img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            float: right;
+        }
+        .playlist-info {
+            margin-top: 20px;
+        }
+        .playlist-stats {
+            text-align: left;
+        }
+        .action-buttons button {
+            margin-right: 10px;
+        }
+        .playlist-header .details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .playlist-header .details div {
+            text-align: left;
+        }
+        .playlist-header .details .stats {
+            text-align: right;
+        }
+        .playlist-header .hashtag {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            padding: 3px 7px;
+            display: inline-block;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="playlist-header">
+            <img src="/img/Poster/album5.jpg" alt="Playlist Image">
+            <div class="details">
+                <div>
+                    <h1>Folk</h1>
+                    <h2>Trending Music <span class="badge badge-primary"><i class="fa fa-check-circle"></i></span></h2>
+                    <p>7 months ago</p>
+                    <p class="hashtag">#Folk</p>
+                </div>
+               
+            </div>
+        </div>
+        <div class="playlist-info mt-4">
+            <div class="buttons">
+                <div>
+                    <button class="btn btn-outline-primary">Like</button>
+                    <button class="btn btn-outline-secondary">Repost</button>
+                    <button class="btn btn-outline-secondary">Share</button>
+                    <button class="btn btn-outline-secondary">Copy Link</button>
+                    <button class="btn btn-outline-secondary">Add to Next up</button>
+                </div>
+                <div>
+                    <p><i class="fa fa-heart"></i> 733</p>
+                    <p><i class="fa fa-retweet"></i> 31</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
+</body>
+</html>

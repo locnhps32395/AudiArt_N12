@@ -1,0 +1,72 @@
+.track-card {
+    max-width: 800px;
+    margin: 20px auto;
+   
+    padding: 10px; /* Adjusted for smaller size */
+   
+}
+
+.track-card img {
+    border-radius: 50%;
+}
+.track-details-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.track-card .track-details {
+    display: flex;
+    align-items: center;
+}
+.track-card .track-details img {
+    width: 30px; /* Reduced size */
+    height: 30px; /* Reduced size */
+    margin-right: 10px; /* Reduced size */
+}
+.waveform-container {
+    position: relative;
+    width: 40%;
+    height: 40px; /* Reduced size */
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.waveform-bar {
+    width: 1px; /* Reduced size */
+    background: #333;
+    margin-right: 0.5px; /* Reduced size */
+    animation: bounce 1s infinite;
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(0.5);
+    }
+}
+.duration {
+    position: absolute;
+    right: 5px; /* Reduced size */
+    bottom: 5px; /* Reduced size */
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 1px 3px; /* Reduced size */
+    border-radius: 5px;
+    font-size: 10px; /* Reduced size */
+}
+.media img {
+    width: 30px; /* Reduced size */
+    height: 30px; /* Reduced size */
+}
+.media-body h5 {
+    font-size: 14px; /* Reduced size */
+}
+.badge {
+    font-size: 10px; /* Reduced size */
+}
+.btn-sm {
+    font-size: 10px; /* Reduced size */
+    padding: 2px 5px; /* Reduced size */
+}

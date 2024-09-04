@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo Trình Phát Nhạc Sử Dụng HTML CSS và JavaScript</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+</head>
+<body>
+    
+    <audio src="" id="audio"></audio>
+    <div class="container">
+      
+        <div class="music-slider">
+            <input type="range" value="0" class="seek-bar"/>
+            <span class="current-time">00:00</span>
+            <span class="music-time">00:00</span>
+        </div>
+        <div class="controls">
+            <button class="btn btnback"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+            <button class="btn-play pause">
+                <span></span>
+                <span></span>
+            </button>
+            <button class="btn btnnext"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+
+    </div>
+    <script src="../js/file song.js"></script>
+    <script src="../js/file jscript.js"></script>
+</body>
+</html>

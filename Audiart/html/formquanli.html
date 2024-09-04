@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Người Dùng</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #343a40;
+            color: #fff;
+            height: 100vh;
+            position: fixed;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px;
+            margin-bottom: 5px;
+        }
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+        .sidebar .active {
+            background-color: #28a745;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            width: calc(100% - 250px);
+        }
+        .navbar {
+            background-color: #f8f9fa;
+        }
+        .navbar .navbar-brand {
+            margin-left: 250px;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .header-icons {
+            display: flex;
+            align-items: center;
+        }
+        .header-icons a, .header-icons button {
+            color: #495057;
+            margin-right: 10px;
+        }
+        .header-icons a:hover, .header-icons button:hover {
+            color: #007bff;
+        }
+        .table-container {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: flex-start;
+            flex-grow: 1;
+        }
+        .search-bar input {
+            margin-right: 5px;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <!-- Thêm các liên kết sidebar tại đây -->
+    </div>
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="/admin">Quản lý người dùng</a>
+            <form class="form-inline ml-auto">
+                <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
+            </form>
+            <div class="header-icons">
+                <a href="/trangchu"><i class="fas fa-home"></i></a> <!-- Nút Trở về Trang chủ -->
+                <a href="#"><i class="fas fa-star"></i></a>
+                <a href="#"><i class="fas fa-bell"></i></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+            </div>
+        </nav>
+
+        <div class="container mt-5">
+            <div class="table-container p-4 bg-white">
+                <div class="action-buttons">
+                    <div class="search-bar">
+                        <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm...">
+                        <button class="btn btn-secondary" onclick="searchTable()"><i class="fas fa-search"></i> Tìm kiếm</button>
+                    </div>
+                    <div>
+                        <button class="btn btn-warning"><i class="fas fa-user-plus"></i> Thêm mới</button>
+                    </div>
+                </div>
+                <h2 class="mb-4 text-center">Danh Sách Quản Trị Viên</h2>
+                <table id="adminTable" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tên Đăng Nhập</th>
+                            <th>Họ và Tên</th>
+                            <th>Giới Tính</th>
+                            <th>Ngày Sinh</th>
+                            <th>Email</th>
+                            <th>Địa Chỉ</th>
+                            <th>Mật Khẩu</th>
+                            <th>Hình Ảnh</th>
+                            <th>Tiểu Sử</th>
+                            <th>Địa Chỉ Ví</th>
+                            <th>Ngày Tạo</th>
+                            <th>Trạng Thái</th>
+                            <th>Vai Trò</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>admin</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>Nam</td>
+                            <td>1990-01-01</td>
+                            <td>admin@example.com</td>
+                            <td>123 Đường ABC, TP.HCM</td>
+                            <td>••••••••</td>
+                            <td>image.jpg</td>
+                            <td>Quản trị viên hệ thống</td>
+                            <td>1234567890</td>
+                            <td>2023-01-01</td>
+                            <td>Hoạt động</td>
+                            <td>QuanTriVien</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-primary"><i class="fas fa-edit"></i> Sửa</button>
+                                    <button class="btn btn-danger"><i class="fas fa-trash"></i> Xóa</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Repeat the above <tr> block for more administrators -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#adminTable').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+                "language": {
+                    "search": "Tìm kiếm:",
+                    "paginate": {
+                        "first": "Đầu",
+                        "last": "Cuối",
+                        "next": "Tiếp",
+                        "previous": "Trước"
+                    },
+                    "info": "Hiển thị _START_ đến _END_ của _TOTAL_ quản trị viên",
+                    "infoEmpty": "Không có quản trị viên nào để hiển thị",
+                    "zeroRecords": "Không tìm thấy quản trị viên nào",
+                    "infoFiltered": "(lọc từ _MAX_ quản trị viên)"
+                }
+            });
+        });
+
+        function searchTable() {
+            var table = $('#adminTable').DataTable();
+            var searchText = $('#searchInput').val();
+            table.search(searchText).draw();
+        }
+    </script>
+</body>
+</html>
